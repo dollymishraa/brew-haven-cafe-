@@ -26,7 +26,7 @@ function EventModal({ event, onClose }: { event: typeof events[0]; onClose: () =
       <div className="modal-box" onClick={e => e.stopPropagation()}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
           <div>
-            <span style={{ fontSize: 28 }}>{event.icon}</span>
+            <span style={{ fontSize: 28 }}></span>
             <h2 style={{ marginTop: 8 }}>{event.title}</h2>
           </div>
           <button className="btn-ghost" onClick={onClose}><X size={18} /></button>
@@ -119,7 +119,7 @@ export default function EventsPage() {
                   <div style={{ position: 'relative' }}>
                     <img src={event.image} alt={event.title} loading="lazy" />
                     <div className="img-overlay" />
-                    <span style={{ position: 'absolute', top: 12, left: 12, fontSize: 28 }}>{event.icon}</span>
+                    <span style={{ position: 'absolute', top: 12, left: 12, fontSize: 28 }}></span>
                     <span className={`badge ${event.category === 'Weekly' ? 'badge-green' : 'badge-accent'}`} style={{ position: 'absolute', top: 14, right: 14 }}>
                       {event.category}
                     </span>
